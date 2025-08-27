@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic-Tac-Toe with Brain.js AI</h1>
+    <div id="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+    <div id="status">Your turn (X)</div>
+    <div id="ai-move-info" style="margin:10px 0;color:#0074d9;font-weight:bold;display:flex;align-items:center;"></div>
+    <button id="reset-button">Reset Game</button>
+
+    <h2 id="nn-header" style="display: none;">Структура нейронной сети</h2>
+    <div id="nn-legend" style="display: none;">
+        <b>Вход:</b> <span class="legend-x">■</span> X | <span class="legend-o">■</span> O. 
+        <b>Выход:</b> Чем темнее синий, тем выше вероятность хода. Серый - клетка занята.
+    </div>
+    <div id="nn-visualization"></div>
+
+    <script src="https://unpkg.com/brain.js@2.0.0-beta.23/dist/browser.js"></script>
+     <!-- <script src="https://unpkg.com/brain.js@latest/dist/browser.js"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>

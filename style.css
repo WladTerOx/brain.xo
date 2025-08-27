@@ -1,0 +1,122 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell:hover {
+    background-color: #eee;
+}
+
+.cell.x {
+    color: #ff4136;
+}
+
+.cell.o {
+    color: #0074d9;
+}
+
+#status {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    min-height: 1.5em;
+}
+
+#reset-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #0074d9;
+    color: white;
+    border-radius: 5px;
+}
+
+#reset-button:hover {
+    background-color: #0056b3;
+}
+
+#nn-header {
+    margin-top: 30px;
+}
+
+#nn-legend {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.legend-x {
+    color: #ff4136;
+}
+
+.legend-o {
+    color: #0074d9;
+}
+
+#nn-visualization {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    max-width: 90vw;
+    min-height: 300px; /* Добавляем минимальную высоту */
+    overflow-x: auto;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+/* Стили для SVG элементов нейронной сети */
+#nn-visualization svg {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+}
+
+#nn-visualization .layer {
+    stroke: #333;
+    stroke-width: 1px;
+}
+
+#nn-visualization .node circle {
+    stroke: #333;
+    stroke-width: 1px;
+    transition: fill 0.3s ease; /* Плавное изменение цвета */
+}
+
+#nn-visualization .node text {
+    font-size: 12px;
+    fill: #333;
+}
+
+#nn-visualization .connection {
+    stroke: #666;
+    stroke-width: 0.5px;
+}
